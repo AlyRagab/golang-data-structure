@@ -32,12 +32,12 @@ func (l *List) move(value int) {
 }
 
 func main() {
-	myList := &List{}
-	myList.move(1)
-	myList.move(2)
-	myList.move(3)
+	list := &List{}
+	for i := 1; i <= 5; i++ {
+		list.move(i)
+	}
 
-	n := myList.first()
+	n := list.first()
 	fmt.Println(n.value)
 
 	n = n.second()
