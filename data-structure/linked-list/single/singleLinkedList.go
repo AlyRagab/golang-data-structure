@@ -1,3 +1,11 @@
+// A single pointing linked list which points only to the next node
+/* The ourput should be like :
+The next node is : 1
+The next node is : 2
+The next node is : 3
+The next node is : 4
+The next node is : 5
+*/
 package main
 
 import "fmt"

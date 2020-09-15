@@ -1,4 +1,16 @@
 // It is not only pointing to the next node as implemented in the single linked list , but also pointing to the previous one as well.
+/* The output should be like :
+The next node is : 1
+The next node is : 2
+The next node is : 3
+The next node is : 4
+The next node is : 5
+>> The Previous node is :  5
+>> The Previous node is :  4
+>> The Previous node is :  3
+>> The Previous node is :  2
+>> The Previous node is :  1
+*/
 package main
 
 import "fmt"
