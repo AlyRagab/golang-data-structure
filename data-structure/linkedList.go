@@ -9,16 +9,16 @@ type List struct {
 
 // Node struct which has the information to the next one
 type Node struct {
-	value int
-	next  *Node
+	value  int
+	second *Node
 }
 
 // Pointing to the first node or element
 func (l *List) first() *Node {
 	return l.head
 }
-func (n *Node) second() *Node {
-	return n.next
+func (n *Node) next() *Node {
+	return n.second
 }
 
 func (l *List) move(value int) {
@@ -26,7 +26,7 @@ func (l *List) move(value int) {
 	if l.head == nil {
 		l.head = node
 	} else {
-		l.tail.next = node
+		l.tail.second = node
 	}
 	l.tail = node
 }
@@ -40,10 +40,10 @@ func main() {
 	n := list.first()
 	fmt.Println(n.value)
 
-	n = n.second()
+	n = n.next()
 	fmt.Println(n.value)
 
-	n = n.second()
+	n = n.next()
 	fmt.Println(n.value)
 
 }
