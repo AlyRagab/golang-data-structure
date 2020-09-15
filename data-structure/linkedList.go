@@ -4,7 +4,7 @@ import "fmt"
 
 // List struct which has the information of the node
 type List struct {
-	head, tail *Node
+	tail, head *Node
 }
 
 // Node struct which has the information to the next one
@@ -13,10 +13,10 @@ type Node struct {
 	second *Node
 }
 
-// Pointing to the first node or element
 func (l *List) first() *Node {
 	return l.head
 }
+
 func (n *Node) next() *Node {
 	return n.second
 }
@@ -30,20 +30,22 @@ func (l *List) move(value int) {
 	}
 	l.tail = node
 }
-
 func main() {
+	// Create a list of 5 nodes
 	list := &List{}
 	for i := 1; i <= 5; i++ {
 		list.move(i)
 	}
 
+	// Move to the first node
 	n := list.first()
-	fmt.Println(n.value)
 
-	n = n.next()
-	fmt.Println(n.value)
-
-	n = n.next()
-	fmt.Println(n.value)
-
+	// Move to the rest of nodes
+	for {
+		fmt.Println("The next node is :", n.value)
+		n = n.next()
+		if n == nil {
+			break
+		}
+	}
 }
